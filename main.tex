@@ -40,12 +40,17 @@
     \section{React Architecture and State Management}
     \subsection{Overview of React}
     \subsubsection{Components}
+    Components are the backbone of React. Components are functions that begin with a capital letter and return the special JSX syntax of React. These components represent a custom resusable HTML element. Components may also house functions for handling interaction with parts of the component. A component may be used to represent a single tile of a product on an ECommerce site. Components may also be passed children (other components) to nest inside itself or props. The JSX returned by the component is what gets rendered when the component is compiled and it will be what the user sees. Components can then be created by first importing them into whatever component they will be added to and then creating them using HTML like notation.
     
     \subsubsection{Props}
+    Props are passed to components like parameters. These props are passed via the attributes of the component tag. Components can specify their props by using an object with the names of each prop it will recieve. Props allow us to customize the behavior or appearence of compnents without having to create whole new components.
     
     \subsubsection{State}
     % Include part about updating arrays and objects without mutating state
     % https://react.dev/learn/updating-arrays-in-state
+    State variables allow React to perform dynamic rerendering. Instead of manually updating the DOM when a varaible changes, state changes could instead trigger the rerendering of any components that rely on them. In React states are created using the useState function which returns a variable storing the state and a setter function for that state variables. The state variable should be passed to any component via props, attributes, or children (the content inside an element) you want to reflect the latest state. When you wish to change state you should use the setter function provided instead of manually altering the state variable. Using the setter function will automatically rerender any component that was using that state variable so it reflects that change in state.
+
+    There may be times where you would need to use an object or array as state. These states should not be mutated directly and should instead be reassigned each time. For arrays many of the functions return instead of mutating (i.e. filter or map)
 
     \subsubsection{Effects}
     
