@@ -31,8 +31,11 @@
     After discussing the basics of HTML, CSS, and JS we moved onto the more streamlined React framework. React took the cumbersome DOM manipulation of JavaScript and made it far easier to work with. Instead of having to manually rerender elements anytime some value changed React handles those changes for us. React does this through state variables. When a state variable's setter function is called it will change the state's value and then rerender any components that rely on it. React also provides us with JSX an HTML like markup langauge that can be used to create lightweight component for rendering. Rather than having our HTML and JS in sepereate files React stores it all in one file using components. Each React component will be passed properties like states and will return JSX describing how to build that component. The component may also have function inside it for handling things like button presses or form submissions.
     
     \subsection{Vite}
+    React requires a special compiler to convert it to HTML, CSS, and JS that the clients browser can read. Additionally a server is needed to send these webpages to the user upon request. Vite handles all this for us. Vite is a frontend build tool and development server for JavaScript and TypeScript. Vite will bundle together all our modules, compile our React code, and serve it up to us at a specific host and port. Vite allows us to view our webpage as we build it using Hot Module Replacement which will rerender parts of the webpage as they change. This accelerates development and allows us to test our page before it is deployed to the wider internet.
 
     \subsection{Technical Evidence}
+
+    %%%%%%%% TODO %%%%%%%%%
 
     \section{React Architecture and State Management}
     \subsection{Overview of React}
